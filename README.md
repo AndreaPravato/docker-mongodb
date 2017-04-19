@@ -3,19 +3,15 @@
 
 This repository contains **Dockerfile** of [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
-
-### Base Docker Image
-
-* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
-
-
 ### Installation
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/mongodb/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/mongodb`
+### Build
+```shell
+docker build -t="yourdockerusername/mongodb" github.com/acrossthecloud/mongodb
+```
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mongodb" github.com/dockerfile/mongodb`)
 
 
 ### Usage
