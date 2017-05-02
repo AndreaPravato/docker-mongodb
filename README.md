@@ -1,7 +1,7 @@
 ## MongoDB yourdockerusername
 
 
-This repository contains **yourdockerusername** of [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/yourdockerusername/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains the Dockerfile that helps you build [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/yourdockerusername/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 ### Installation
 
