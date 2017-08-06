@@ -1,15 +1,19 @@
-## MongoDB yourdockerusername
+## Build a docker container for the desired version of MongoDB 
 
 
-This repository contains a **Dockerfile** that helps you build [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/yourdockerusername/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains a **Dockerfile** that helps you build a [MongoDB](http://www.mongodb.org/) [Docker](https://www.docker.com/) container. 
+This Dockerfile, despite many others available online, support and let's you specify the desired version of MongoDB; also versions before of 3.2, like 2.6.10 are supported. 
 
 ### Installation
 
 1. Install [Docker](https://www.docker.com/).
 
 ### Build
+You can pass the desired mongo version as an argument of the build command. 
+If you do not specify --build-arg VERSION=<version number>, by default 2.6.10 will be used.
+The list of available versions can be found at [this link](http://downloads-distro.mongodb.org/repo/ubuntu-upstart/dists/dist/10gen/binary-amd64/)
 ```shell
-docker build -t="yourdockerusername/mongodb" github.com/AndreaPravato/docker-mongodb
+docker build -t yourdockerusername/mongodb2.6.10 github.com/AndreaPravato/docker-mongodb --build-arg VERSION=2.6.10
 ```
 
 
@@ -38,7 +42,7 @@ docker build -t="yourdockerusername/mongodb" github.com/AndreaPravato/docker-mon
 
 ##### Usage with VirtualBox (boot2docker-vm)
 
-_You will need to set up nat port forwarding with:_  
+_You will need to set up nat port forwarding with:_
 
     VBoxManage modifyvm "boot2docker-vm" --natpf1 "guestmongodb,tcp,127.0.0.1,27017,,27017"
 
