@@ -1,4 +1,4 @@
-## Build a docker container for the desired version of MongoDB 
+## Build a docker container for the desired MongoDB version
 
 
 This repository contains a **Dockerfile** that helps you build a [MongoDB](http://www.mongodb.org/) [Docker](https://www.docker.com/) container. 
