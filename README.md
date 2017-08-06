@@ -2,7 +2,7 @@
 
 
 This repository contains a **Dockerfile** that helps you build a [MongoDB](http://www.mongodb.org/) [Docker](https://www.docker.com/) container. 
-This Dockerfile, despite many others available online, support and let's you specify the desired version of MongoDB; also versions before of 3.2, like 2.6.10 are supported. 
+This Dockerfile supports and let's you specify the desired version of MongoDB; also versions before of 3.2, like 2.6.10, are supported. 
 
 ### Installation
 
