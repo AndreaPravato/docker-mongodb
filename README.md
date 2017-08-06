@@ -1,7 +1,7 @@
 ## MongoDB yourdockerusername
 
 
-This repository contains the Dockerfile that helps you build [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/yourdockerusername/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains a **Dockerfile** that helps you build [MongoDB](http://www.mongodb.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/yourdockerusername/mongodb/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 ### Installation
 
@@ -9,7 +9,7 @@ This repository contains the Dockerfile that helps you build [MongoDB](http://ww
 
 ### Build
 ```shell
-docker build -t="yourdockerusername/mongodb" github.com/acrossthecloud/mongodb
+docker build -t="yourdockerusername/mongodb" github.com/AndreaPravato/docker-mongodb
 ```
 
 
@@ -41,5 +41,9 @@ docker build -t="yourdockerusername/mongodb" github.com/acrossthecloud/mongodb
 _You will need to set up nat port forwarding with:_  
 
     VBoxManage modifyvm "boot2docker-vm" --natpf1 "guestmongodb,tcp,127.0.0.1,27017,,27017"
+
+_If boot2docker is already running:_
+
+    boot2docker stop && VBoxManage modifyvm "boot2docker-vm" --natpf1 "guestmongodb,tcp,127.0.0.1,27017,,27017" && boot2docker restart
 
 This will allow you to connect to your mongo container with the standard `mongo` commands.
